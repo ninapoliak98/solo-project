@@ -4,9 +4,7 @@ export const currFormat = (data) => {
 }
 
 export const toChartData = (data) => {
-
-    return data.prices.map((elem) =>
+    return data.prices?.map((elem) =>
      ({x:elem[0], y: elem[1]})
     )
-
 }
