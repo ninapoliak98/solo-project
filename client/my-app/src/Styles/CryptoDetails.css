@@ -1,0 +1,18 @@
+.each_crypto {
+    display: flex;
+    gap: 1rem;
+    border: none;
+    background-color: #FFC5C5;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.each_crypto img {
+    width: 40px;
+    height: 40px;
+}
+.icon {
+   display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
