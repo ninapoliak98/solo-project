@@ -27,6 +27,5 @@ body {
     gap: 1rem
 }
 .nav li:hover {
-    background-color: #FFC5C5;
     color: white;
 }
