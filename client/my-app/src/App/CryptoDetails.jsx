@@ -1,8 +1,9 @@
+import React, { Component }  from 'react';
 import "../Styles/CryptoDetails.css"
 import {currFormat, id_Format, symbol_Format} from "./marketservices";
 import CryptoGraph from "./CryptoGraph";
 import {useState} from "react";
-export default function CryptoDetails({details, data, click}) {
+export default function CryptoDetails({details}) {
     const [d, setD] = useState([])
     const getDivId = async (e) => {
         e.preventDefault();
@@ -26,7 +27,7 @@ export default function CryptoDetails({details, data, click}) {
                 <p>{symbol_Format(details.symbol)}</p>
             </div>
             <div className="current_price">
-                <p>{details.current_price}</p>
+                <p>{currFormat(details.current_price)}</p>
             </div>
             </div>
             <div className="chart">

@@ -5,7 +5,7 @@ export default function NavBar() {
         return <nav className="nav">
             <ul>
                <li>
-                  <a href="/overview">
+                  <a href="/">
                       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAcNJREFUSEvV1kFSwjAUBuD3OsNabiCcALclLOAEwgmUk6gnEU8gnqBuUrZ6AvEGuGamz3mYhjRNSRNgGLMBhiRf0iR/g3ChghdyIRomKe+BiHA0eokZfBRMeb4AojsFLlCIeSgeDFto6QXjQbCF/ij1KmbmrWEHOlbgOwAE461gF4pCfDBMUt4AQDDuhQ+h5QLH4AfhNmgs3giHoDG4E45BQ/EafAwagldgRzg8oRCPusMs60KncwuIn5VdTTSA7fYNJ5ONgXO7ByPRKiGj4V32Ajxb0adhtXNfAaBXBob65HZc1gAwMwZkw1xnjkIs+MsezvMpEHHHZjFh7vjak8lrFKKvzncdRpzhcLiswDoMiqILSZIpYAfTatWDovhq9SJIkj6m6Zqk3MNFMYEk2ZRPowYb60MmrAbFSTXw4Lz2nGScaBpGIWqb2H2cpHTBdjTaY+CXxti1xkfBeimquVziFfSkMzaWwZ55DT0LbM2cf+rHaz77k62xvaC7c807NU35mNXK2WDf0fp3MGdueZ3xTc73/zcKUcasrtt0jl257QOa/tf5bFZovgj83aWmsZpqtzRjshV8JOht7r3seXuIrPALW0s+LuCLHpsAAAAASUVORK5CYII="/>
                   </a>
                </li>

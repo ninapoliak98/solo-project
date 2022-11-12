@@ -12,8 +12,6 @@ import {
 } from 'recharts'
 
 export default function CryptoGraph({data}) {
-    function checkIfData () {
-    }
     return(
         <div className="linechart">
             <LineChart width={200} height={90} data={toChartData(data)}>

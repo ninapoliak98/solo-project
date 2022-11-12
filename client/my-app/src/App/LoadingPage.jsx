@@ -1,12 +1,10 @@
+import React from 'react';
 import { init, useConnectWallet } from '@web3-onboard/react'
 import injectedModule from '@web3-onboard/injected-wallets'
-import { ethers } from 'ethers'
-import Hers from "../Icons/Hers.svg"
+import { useNavigate } from "react-router-dom";
 
 const injected = injectedModule()
 
-
-const infuraKey = 'b280a6aa48a94b698a78d2f3acf0e892'
 
 init({
     wallets: [injected],

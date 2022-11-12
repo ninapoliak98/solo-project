@@ -1,3 +1,5 @@
+import SendCoins from "./SendCoins";
+import RecieveCoins from "./RecieveCoins";
 
 export default function TransactionPage() {
     //will have send and recieve
@@ -5,6 +7,8 @@ export default function TransactionPage() {
     return(
         <div>
             Transaction Page
+            <SendCoins/>
+            <RecieveCoins/>
         </div>
     )
 }
