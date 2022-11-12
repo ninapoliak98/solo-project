@@ -8,3 +8,9 @@ export const toChartData = (data) => {
      ({x:elem[0], y: elem[1]})
     )
 }
+export const id_Format = (data) => {
+    return data.charAt(0).toUpperCase() + data.slice(1);
+}
+export const symbol_Format = (data) => {
+    return data.toUpperCase()
+}

@@ -6,13 +6,40 @@
     border-radius: 15px;
     margin-bottom: 10px;
     width: 100%;
+    min-height: 50px;
+    max-height: 100px;
 }
 .each_crypto img {
     width: 40px;
     height: 40px;
 }
 .icon {
-   display: flex;
+    display: flex;
     flex-direction:column;
     justify-content: center;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+}
+p {
+    margin: 5px;
+    padding: 0;
+    margin-left: 0;
+}
+.name {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.current_price{
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.chart {
+
 }

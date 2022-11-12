@@ -15,7 +15,7 @@ init({
             id: '0x1',
             token: 'ETH',
             label: 'Ethereum',
-            rpcUrl: 'https://mainnet.infura.io/v3/${infuraKey}'
+            rpcUrl: 'https://mainnet.infura.io/v3/b280a6aa48a94b698a78d2f3acf0e892'
         }
     ]
 })

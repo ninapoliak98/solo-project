@@ -1,4 +1,5 @@
 import {toChartData} from "./marketservices";
+import "../Styles/CryptoGraph.css"
 import {
     LineChart,
     Line,
@@ -14,8 +15,8 @@ export default function CryptoGraph({data}) {
     function checkIfData () {
     }
     return(
-        <div>
-            <LineChart width={700} height={300} data={toChartData(data)}>
+        <div className="linechart">
+            <LineChart width={200} height={90} data={toChartData(data)}>
                 <Line yAxisId="left-axis" type="monotone" dataKey="y"
                       stroke="green" dot={false}/>
             </LineChart>

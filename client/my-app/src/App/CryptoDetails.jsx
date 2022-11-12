@@ -1,5 +1,5 @@
 import "../Styles/CryptoDetails.css"
-import {currFormat} from "./marketservices";
+import {currFormat, id_Format, symbol_Format} from "./marketservices";
 import CryptoGraph from "./CryptoGraph";
 import {useState} from "react";
 export default function CryptoDetails({details, data, click}) {
@@ -22,15 +22,15 @@ export default function CryptoDetails({details, data, click}) {
             </div>
             <div className="details">
             <div className="name">
-                <p>{details.id}</p>
-                <p>{details.symbol}</p>
+                <p>{id_Format(details.id)}</p>
+                <p>{symbol_Format(details.symbol)}</p>
             </div>
             <div className="current_price">
-                <p>{currFormat(details.current_price)}</p>
+                <p>{details.current_price}</p>
             </div>
-            <div>
-              <CryptoGraph data={d}/>
             </div>
+            <div className="chart">
+                <CryptoGraph data={d}/>
             </div>
         </div>
     )
