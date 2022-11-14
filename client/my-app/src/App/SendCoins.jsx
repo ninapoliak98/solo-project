@@ -7,7 +7,7 @@ export default function SendCoins(){
             <div className="send_form_elements">
                 <label>Recipient Address </label>
                 <input  required  type="text" name="Address" placeholder="" />
-                <Label>Amount</Label>
+                <label>Amount</label>
                 <input required type="text" name="Amount"/>
                 <button>Send</button>
             </div>

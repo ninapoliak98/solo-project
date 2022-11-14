@@ -2,7 +2,7 @@
 export default function RecieveCoins() {
     return(
         <div>
-            Recieve Coins
+            Wallet Address
         </div>
     )
 }

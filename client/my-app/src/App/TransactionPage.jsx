@@ -1,12 +1,12 @@
 import SendCoins from "./SendCoins";
 import RecieveCoins from "./RecieveCoins";
+import {useState} from "react";
 
 export default function TransactionPage() {
-    //will have send and recieve
+    const [bool, setBool] = useState(false)
 
     return(
         <div>
-            Transaction Page
             <SendCoins/>
             <RecieveCoins/>
         </div>

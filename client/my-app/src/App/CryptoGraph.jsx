@@ -11,10 +11,11 @@ import {
     ResponsiveContainer,
 } from 'recharts'
 
-export default function CryptoGraph({data}) {
+export default function CryptoGraph({data, id}) {
     return(
         <div className="linechart">
-            <LineChart width={200} height={90} data={toChartData(data)}>
+            <h1>{id}</h1>
+            <LineChart width={300} height={600} data={toChartData(data)}>
                 <Line yAxisId="left-axis" type="monotone" dataKey="y"
                       stroke="green" dot={false}/>
             </LineChart>
