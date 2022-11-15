@@ -4,6 +4,7 @@ import Onboard from '@web3-onboard/core'
 import walletConnectModule from '@web3-onboard/walletconnect'
 const walletConnect = walletConnectModule();
 const injected = injectedModule();
+import "../Styles/LoadingPage.css"
 
 const modules = [walletConnect, injected];
 
@@ -35,10 +36,17 @@ const onboard = Onboard({
         ],
     }
 });
-export default function LoadingPage({setAccount}) {
 
+export default function LoadingPage({setAccount}) {
+    const [buttonText, setButtonText] = useState("Connect"); //same as creating your state variable where "Next" is the default value for buttonText and setButtonText is the setter function for your state variable instead of setState
+    const [press, setPress] = useState(false)
+    const changeText = (text) => {
+        setButtonText(text);
+        setPress(!press)
+    }
 
     const connectWallet = async () => {
+        changeText("Disconnect")
         try {
             const wallets = await onboard.connectWallet();
             console.log(wallets[0].accounts[0])
@@ -49,6 +57,7 @@ export default function LoadingPage({setAccount}) {
         }
     };
     const disconnect = async () => {
+        changeText("Connect")
         const [primaryWallet] = onboard.state.get().wallets;
         if (primaryWallet) await onboard.disconnectWallet({ label: primaryWallet.label });
         refreshState();
@@ -60,19 +69,15 @@ export default function LoadingPage({setAccount}) {
 
 
     return(
-        <div id="loading_page">
+
             <div id="connect_wallet">
-                <div>
-                    <button
-                        onClick={connectWallet}
-                    > connect
-                    </button>
-                    <button
-                        onClick={disconnect}
-                    > disconnect
-                    </button>
-                </div>
+                <button
+                    onClick={() => (press ? disconnect() : connectWallet())}
+
+                >
+                    {buttonText}
+                </button>
             </div>
-        </div>
+
     )
 }

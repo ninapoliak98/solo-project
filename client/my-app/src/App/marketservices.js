@@ -6,7 +6,7 @@ export const currFormat = (data) => {
 
 export const toChartData = (data) => {
     return data.prices?.map((elem) =>
-     ({x:moment(elem[0]).format("MMM Do YY"), y: elem[1]}));
+     ({date:moment(elem[0]).format("MMM Do YY"), price: parseFloat(elem[1]).toFixed(2)}));
 }
 export const id_Format = (data) => {
     return data.charAt(0).toUpperCase() + data.slice(1);

@@ -1,11 +1,11 @@
 import React, { Component }  from 'react';
 import "../Styles/NavBar.css"
-import LoadingPage from "./LoadingPage";
+
 
 export default function NavBar({setAccount}) {
 
         return <nav className="nav">
-            <h1>Site Name</h1>
+            <h1>Crypto</h1>
             <ul>
                <li>
                   <a href="/home">

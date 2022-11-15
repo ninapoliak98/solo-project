@@ -7,9 +7,11 @@ import CryptoGraph from "./CryptoGraph";
 import Side from "./Side";
 
 
-export default function CryptoMarket({coins, balance, address, setAccount}) {
+export default function CryptoMarket({coins, balance, address, setAccount, trending}) {
     const [d, setD] = useState([])
     const [id, setId] =  useState()
+    const [isActive, setIsActive] = useState(false);
+
     const getDivId = async (e) => {
         e.preventDefault();
         setId(e.currentTarget.id)
@@ -31,7 +33,7 @@ export default function CryptoMarket({coins, balance, address, setAccount}) {
             ))}
         </div>
             <div className="market_container">
-            <Side balance={balance} address={address} setAccount={setAccount}/>
+            <Side balance={balance} address={address} setAccount={setAccount} trending={trending}/>
             <div className="chart_data">
                 <CryptoGraph data={d} id={id}/>
             </div>

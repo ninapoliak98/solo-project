@@ -1,6 +1,7 @@
 import React, {Component, useState} from 'react';
 import Web3 from "web3";
 import LoadingPage from "./LoadingPage";
+import "../Styles/SendCoins.css"
 
 export default function SendCoins({address}){
 
@@ -45,15 +46,13 @@ export default function SendCoins({address}){
 
     return(
         <div className="form">
-            <h1 className="form_name">Create a New Event</h1>
             <div className="form_fields">
-                <form onSubmit={sendEthButton}>
-                    <label>Receiver</label>
+                <form onSubmit={sendEthButton} className="form_design">
+                    <label><h3>Receiver</h3></label>
                     <input  required  type="text" name="submitTo" />
-
-                    <label>Amount</label>
+                    <label><h3>Amount</h3></label>
                     <input  required  type="text" name="submitAmount" />
-                    <button>
+                    <button className="send">
                         Send
                     </button>
                 </form>

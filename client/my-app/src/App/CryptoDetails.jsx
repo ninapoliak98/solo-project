@@ -1,11 +1,19 @@
-import React, { Component }  from 'react';
+import React, {Component, useState} from 'react';
 import "../Styles/CryptoDetails.css"
 import {currFormat, id_Format, symbol_Format} from "./marketservices";
-import CryptoGraph from "./CryptoGraph";
-import {useState} from "react";
+
 export default function CryptoDetails({details}) {
+    const [isActive, setIsActive] = useState(false);
+    const [id, setId] = useState("")
+
+    const handleClick = (e) => {
+        if(id.length > 0 && id !== e.currentTarget.id) setIsActive(true)
+        setIsActive(false)
+        setId(e.currentTarget.id)
+    };
     return(
-        <div className='each_crypto' id={details.id} >
+        <div className='each_crypto' id={details.id}
+             onClick={handleClick} >
             <div className="icon">
                 <img src={details.image}/>
             </div>
