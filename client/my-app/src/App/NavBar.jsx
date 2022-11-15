@@ -1,9 +1,11 @@
+import React, { Component }  from 'react';
 import "../Styles/NavBar.css"
 import LoadingPage from "./LoadingPage";
 
-export default function NavBar() {
+export default function NavBar({setAccount}) {
 
         return <nav className="nav">
+            <h1>Site Name</h1>
             <ul>
                <li>
                   <a href="/home">
@@ -14,9 +16,6 @@ export default function NavBar() {
                     <a href= "/send">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAARhJREFUSEvt1cFxwkAMBdD/OXBNSqAEOGJdoBKcCqCFdJB04FRiLss5JSQd0IEyy5gZCF6Q5QVf2BnfdvUkrWZNDLQ4kIsn/LDOZ2m11vUrxuM1Rd6tmfeGG7QGMAVQUeTNgveHQ4jgFsBLA5rw3nDE1IFngT14Nrgr3gprCFuQahmSiz2qEwDxO65Pimz+70vBPjSRKUUunHTFrnJbD8Upr0wV5zPTkbIOV5eEU60uQa66BLq2l0WxNLVaQxhsuD4ArE+y/AXw4+0ARRamig+PwW5XQfXY7j2AJUW+vbgZvjd+c6rvVflNuLXy0WjG+dx95zGmCT7DyS8WRdn3rs1w8/cp254/TxKdYA+QOvOEc3bzaqzBWv0H3NtnH/iqLgAAAAAASUVORK5CYII="/>
                     </a>
-                </li>
-                <li>
-                    <LoadingPage/>
                 </li>
             </ul>
         </nav>

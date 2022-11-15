@@ -1,11 +1,13 @@
+import React, { Component }  from 'react';
 import "./marketservices"
 import "../Styles/CryptoMarket.css"
 import CryptoDetails from "./CryptoDetails";
 import {useState} from "react";
 import CryptoGraph from "./CryptoGraph";
+import Side from "./Side";
 
 
-export default function CryptoMarket({coins, balance}) {
+export default function CryptoMarket({coins, balance, address, setAccount}) {
     const [d, setD] = useState([])
     const [id, setId] =  useState()
     const getDivId = async (e) => {
@@ -28,8 +30,11 @@ export default function CryptoMarket({coins, balance}) {
                 </div>
             ))}
         </div>
+            <div className="market_container">
+            <Side balance={balance} address={address} setAccount={setAccount}/>
             <div className="chart_data">
-            <CryptoGraph data={d} id={id}/>
+                <CryptoGraph data={d} id={id}/>
+            </div>
             </div>
         </div>
     )
